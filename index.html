@@ -7,6 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>Tab Challenge</title>
 	<link rel="stylesheet" href="style.css">
+	<script src="tabs.js"></script>
 </head>
 
 <body>
@@ -23,8 +24,7 @@
 					<a role="tab" id="tab-section3" href="#section3">Terminal 3</a>
 				</li>
 			</ul>
-			<section role="tabpanel" id="section1" aria-labelledby="tab-section1" tabindex="-1"
-				class="tab-content is-active">
+			<section role="tabpanel" id="section1" aria-labelledby="tab-section1" tabindex="-1" class="tab-content">
 				<h2>Terminal 1</h2>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra magna in gravida iaculis.
 					Vivamus ut tempus nunc. In in mi at nibh scelerisque vestibulum. Aenean at tortor leo. Duis sodales
@@ -33,17 +33,18 @@
 					vel, iaculis vitae eros. Sed posuere ipsum a elementum ultrices. Etiam et ipsum dignissim, tincidunt
 					nulla quis, vestibulum felis.</p>
 			</section>
-			<section role="tabpanel" id="section2" aria-labelledby="tab-section2" tabindex="-1" class="tab-content">
+			<section role="tabpanel" id="section2" aria-labelledby="tab-section2" tabindex="-1" class="tab-content"
+				hidden>
 				<h2>Terminal 2</h2>
 				<p>Content for section 2.</p>
 			</section>
-			<section role="tabpanel" id="section3" aria-labelledby="tab-section3" tabindex="-1" class="tab-content">
+			<section role="tabpanel" id="section3" aria-labelledby="tab-section3" tabindex="-1" class="tab-content"
+				hidden>
 				<h2>Terminal 3</h2>
 				<p>Content for section 3.</p>
 			</section>
 		</div>
 	</p>
 </body>
-<script src="tabs.js"></script>
 
 </html>
