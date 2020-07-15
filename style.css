@@ -35,8 +35,18 @@ body {
 
 .tab-component>ul a {
     display: inline-block;
+    color: inherit;
     text-align: center;
     vertical-align: top;
     text-decoration: none;
     padding: 0.8rem 2rem;
+}
+
+.tab-component [aria-selected="true"] {
+    background-color: #fff;
+    border-top: 3px solid #06A7A9;
+}
+
+.tab-content:focus {
+    outline: none;
 }
