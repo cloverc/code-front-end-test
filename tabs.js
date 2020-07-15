@@ -21,7 +21,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
         const {
             id
         } = e.currentTarget;
-        console.log(id);
 
         const currentTab = tabPanels.find(
             panel => panel.getAttribute('aria-labelledby') === id
