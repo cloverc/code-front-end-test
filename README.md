@@ -1,7 +1,7 @@
 # Tab interview task
 
 ## Intro
-Your client within your team has requested a tab component for their site. The work was approved and handed to the team designer designer, who has created a design for large screens in Sketch however they haven't done anything for small screens. They have now gone on holiday with the work unfinished and you have the task to complete the work.
+Your client within your team has requested a tab component for their site. The work was approved and handed to the team designer, who has created a design for large screens in Sketch however they haven't done anything for small screens. They have now gone on holiday with the work unfinished and you have the task to complete the work.
 
 ## Component Considerations
 - The tab component is to be managed by the client
@@ -43,3 +43,17 @@ The following acceptance criteria have been developed between the team and the c
 **Given:** I am a site author
 **When:** I add the component to the page
 **Then:** I want to be able to add as many tabs as i require
+
+## Approach
+
+Given the time constraints I tried to approach the task with simplicity in mind and offering a functional, responsive, accessible tab component in the alloted time.
+
+I began by creating semantic markup for the tab component; adding appropriate WAI-ARIA states, roles and properties where necessary. I added basic CSS for the layout. I did not utilise SASS or other preprocessors for this task as I believed it would be overkill here.
+
+I made the layout resposive; utilising rem sizing and flexbox and added a mobile breakpoint media query to handle a tabbed interface on smaller devices. I reconfigured the content into a single column where there was insufficinet room to layout addional tabs horizontally.
+
+Testing for this scenario was manual given the time constraints. Typically I would employ unit, integration and e2e testing (although not _usually_ with vanilla JavaScript!) I tested using right-to-left text direction to account for global audiences.
+
+I also tested cross browser (Chrome, Safari and Firefox). I do not belive this is compatible with IE as I have utilised some JavaScript ES6 methods (these could be transpiled if I added a Babel build config given more time).
+
+Further testing on simulation devices was carried out using Chrome dev tools to check mobile layout and functionality. Screen reader functionality was tested on Safari using VoiceOver.
