@@ -12,17 +12,11 @@
 
 <body>
 	<div class="tab-component">
-		<ul role="tablist">
-			<li role="presentation">
-				<a role="tab" id="tab-section1" href="#section1" aria-selected="true">Terminal 1</a>
-			</li>
-			<li role="presentation">
-				<a role="tab" id="tab-section2" href="#section2">Terminal 2</a>
-			</li>
-			<li role="presentation">
-				<a role="tab" id="tab-section3" href="#section3">Terminal 3</a>
-			</li>
-		</ul>
+		<div role="tablist">
+			<button role="tab" id="tab-section1" aria-selected="true">Terminal 1</button>
+			<button role="tab" id="tab-section2" aria-selected="false">Terminal 2</button>
+			<button role="tab" id="tab-section3" aria-selected="false">Terminal 3</button>
+		</div>
 		<section role="tabpanel" id="section1" aria-labelledby="tab-section1" tabindex="-1" class="tab-content">
 			<h2>Terminal 1</h2>
 			<p>Panel 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed pharetra magna in gravida
