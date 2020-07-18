@@ -3,37 +3,15 @@ document.addEventListener("DOMContentLoaded", function (event) {
     const tabButtons = tab.querySelectorAll('[role="tab"]');
     const tabPanels = Array.from(tab.querySelectorAll('[role="tabpanel"]'));
 
-    function tabClickHandler(event) {
-        //hide all tabPanels
-        // tabPanels.forEach(panel => {
-        //     panel.hidden = 'true';
-        // });
+    tabButtons.forEach(button => {
+        button.addEventListener('click', event => {
+            event.preventDefault();
+            hideTab();
+            showTab(event);
+        });
+    });
 
-        hideTabs();
-
-        showTabs(event);
-
-        //deselect tab
-        // tabButtons.forEach(button => {
-        //     button.setAttribute('aria-selected', false);
-        // });
-
-        // //mark new tab as selected
-        // event.currentTarget.setAttribute('aria-selected', 'true');
-
-        // //show new Tab
-        // const {
-        //     id
-        // } = event.currentTarget;
-
-        // const currentTab = tabPanels.find(
-        //     panel => panel.getAttribute('aria-labelledby') === id
-        // );
-        // currentTab.hidden = false;
-    }
-
-    const hideTabs = () => {
-        console.log("I'm being hidden");
+    const hideTab = () => {
         tabButtons.forEach(button => {
             button.setAttribute('aria-selected', false);
         });
@@ -42,10 +20,9 @@ document.addEventListener("DOMContentLoaded", function (event) {
         });
     }
 
-    const showTabs = event => {
+    const showTab = event => {
         event.currentTarget.setAttribute('aria-selected', true);
 
-        //show new Tab
         const {
             id
         } = event.currentTarget;
@@ -55,10 +32,4 @@ document.addEventListener("DOMContentLoaded", function (event) {
         );
         currentTab.hidden = false;
     }
-
-
-
-    tabButtons.forEach(button => {
-        button.addEventListener('click', tabClickHandler);
-    });
 });
