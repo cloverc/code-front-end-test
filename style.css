@@ -14,58 +14,43 @@ body {
     color: #032F61;
 }
 
-.tab-component>section {
-    background-color: #fff;
-    padding: 2rem;
-    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
-}
-
-.tab-component>ul {
-    list-style: none;
+.tab-buttons {
     margin: 0;
     padding: 0;
     display: flex;
     flex-wrap: wrap;
 }
 
-.tab-component>ul [role="presentation"] {
+.tab-button {
     background-color: #e3e8ec;
+    border: 0;
     margin-right: 0.1rem;
     box-shadow: inset 0 -2px 2px rgba(0, 0, 0, 0.1);
     cursor: pointer;
-}
-
-.tab-component>ul a {
-    display: inline-block;
     color: inherit;
-    text-align: center;
-    vertical-align: top;
-    text-decoration: none;
     padding: 0.8rem 2rem;
 }
 
-.tab-component [aria-selected="true"] {
+.tab-button[aria-selected="true"] {
     background-color: #fff;
+    box-shadow: none;
     border-top: 3px solid #06A7A9;
 }
 
-.tab-content:focus {
+.tab-button:focus {
     outline: none;
 }
 
-@media (max-width: 400px) {
-    .tab-component>ul {
-        flex-wrap: wrap;
-    }
+.tab-content {
+    background-color: #fff;
+    padding: 2rem;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+}
 
-    .tab-component>ul li {
+@media (max-width: 400px) {
+    .tab-button {
         flex-basis: 100%;
         margin: 0;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    }
-
-    .tab-component>ul a {
-        width: 100%;
-        padding: 0.8em 0;
     }
 }
